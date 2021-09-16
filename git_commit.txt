@@ -1,0 +1,6 @@
+after сhanging code when I am working without team
+
+1. git branch (check correct branch)
+2. git add .
+3. git commit -m "Updated Code" (adding comments with message)
+4. git push origin branch-name   
