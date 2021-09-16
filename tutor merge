@@ -1,0 +1,46 @@
+git clone <clone> folder
+cd folder/
+git status
+git branch
+//после добавления файла
+git status
+//скажет что есть:
+	новый файл style.css
+	измененный файл index.html
+git add --all
+git status
+git commit -m "add style list"
+git status //nothing to commit
+git branch new_style
+git checkout new_style //switched to branch 'new_style'
+git branch //проверяем в какой ветке находимся
+	  master
+	* new_style
+//изменяем style.css
+git status
+git add style.css
+git commit -m "green bg style"
+git checkout master
+git branch
+изменяем style.css размер шрифта
+git status
+git add style.css
+git commit -m "set font sizes"
+git status
+
+изменяем style.css выравниваем текст
+git status
+git add style.css
+git commit -m "set body width"
+git status
+
+git log --graph(псевдо графика дерева) --all(для всех веток) --decorate(разукрасит указатели)
+git log --graph --all --decorate --oneline(в одну строку)
+git status
+git add style.css
+git commit //без параметров
+//удаляем запись с файла о конфликте
+git commit
+git status
+git log --graph --all --decorate --oneline
+git push -u origin master﻿
