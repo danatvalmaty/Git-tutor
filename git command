@@ -1,0 +1,88 @@
+git --version
+git config --list
+git config --global user.name "Name"
+git config --global user.email "Email"  
+git config --help
+
+            1 scenario
+cd folder
+git init
+ls -ls //view hidden files
+rm -rf .git 	// remove git folder
+git status  	// can see untracked/traked files 
+
+touch .gitignore // git ignore files description
+////////////////////ADD GITIGNORE FILES : EXAMPLE////////////////////
+.DS_Store
+.project
+*.pyc
+
+////////////////////ADD FILES TO STAGING AREA////////////////////
+git add -A 		// ALL FILES TO STAGING AREA 
+git add FILE_NAME
+ 
+
+
+////////////////////REMOVE FILES FROM STAGING AREA//////////////////// 
+git reset FILE_NAME  
+git reset 		// remove all
+
+
+ 
+//////////////////COMMIT////////////////////
+git add -A
+git commit -m "Initial Commit"
+git status
+git log
+				2 scenario
+/////////////////CLONING A REMOTE REPO/////////////////////
+git clone <URL> <where to clone>
+git clone ../remote_repo.git 
+
+/////////////////VIEWING INFO ABOUT THE REMOTE REPOSITORY
+git remote -v
+git branch -a 
+
+///////////////PUSHING CHANGES
+////////COMMIT CHANGES LIKE WE DID PREVIOUSLY
+git diff
+git status
+git add -A
+git commit -m "UPDATE"
+
+git pull origin master
+git push origin master
+
+////////////////CREATE A BRANCH FOR DESIRED FEATURE///////MERGE/////////////////////
+git branch calc-divide
+git checkout calc-divide    
+git branch 
+git log --graph -all --decorate 
+git log --graph -all --decorate --oneline 
+
+git checkout master
+git merge calc-divide 
+git commit -m "UPDATE"
+git push -u origin master
+///////////////AFTER COMMIT PUSH BRANCH TO REMOTE/////////////////////
+git push -u origin calc-divide
+git branch -a  
+
+
+////////////////////////////////////// TUTOR///////////////
+git init
+git add .
+git commit -m "name"
+git remote add origin http://
+git push -u origin master
+
+//////////////////////////////change version/////////////////////////////
+gitk --all&     (UI Interface  - F5 - refresh)
+ctrl + insert (copy commit ID) 
+shift + insert (past commit ID) 
+git checkout commit-number (switch version)
+
+
+//////////////////////////////return old version file//////////////////
+git checkout path-to-file
+
